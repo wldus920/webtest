@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  margin: 0 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.hot-contents {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin: 20px 0;
+}
+
+.hot-contents::-webkit-scrollbar {
+  height: 5px;
+}
+
+.hot-contents::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 5px;
+}
+
+.hot-contents::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+
+.hot-contents .content {
+  width: 49%;
+  background-color: #e8e8e8;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  text-align: center;
+}

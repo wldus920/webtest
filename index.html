@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>학교 콘텐츠</title>
+	<style>
+		body {
+		  margin: 0;
+		  padding: 0;
+		  background-color: #f2f2f2;
+		}
+
+		.container {
+		  margin: 0 200px;
+		  padding: 20px;
+		  box-sizing: border-box;
+		  background-color: #fff;
+		}
+
+		.hot-contents {
+		  display: flex;
+		  justify-content: flex-start;
+		  overflow-x: hidden;
+		  margin: 20px 0;
+		  flex-wrap: nowrap;
+		}
+
+		.hot-contents .content {
+		  width: 32%;
+		  background-color: #e8e8e8;
+		  padding: 10px;
+		  box-sizing: border-box;
+		  margin-right: 10px;
+		  text-align: center;
+		}
+
+		.search-box {
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+		}
+
+		.search-box input[type="text"] {
+			flex: 1;
+			padding: 10px;
+			border-radius: 5px 0 0 5px;
+			border: none;
+		}
+
+		.search-box button {
+			padding: 10px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 0 5px 5px 0;
+			cursor: pointer;
+		}
+
+		ul {
+			margin-top: 20px;
+			padding-left: 0;
+			list-style-type: none;
+		}
+
+		ul li {
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		ul li:hover {
+			background-color: #e8e8e8;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>학교 콘텐츠</h1>
+		<div class="hot-contents">
+			<div class="content">
+				<h2>HOT CONTENTS 1</h2>
+				<p>내용1</p>
+			</div>
+			<div class="content">
+				<h2>HOT CONTENTS 2</h2>
+				<p>내용2</p>
+			</div>
+			<div class="content">
+				<h2>HOT CONTENTS 3</h2>
+				<p>내용3</p>
+			</div>
+			<div class="content">
+				<h2>HOT CONTENTS 4</h2>
+				<p>내용4</p>
+			</div>
+			<div class="content">
+				<h2>HOT CONTENTS 5</h2>
+				<p>내용5</p>
+			</div>
+			<div class="content">
+				<h2>HOT CONTENTS 6</h2>
+				<p>내용6</p>
+			</div>
+		</div>
+		<div>
+			<input type="text" placeholder="검색">
+			<button>검색</button>
+		</div>
+		<ul>
+			<li>목록1</li>
+			<li>목록2</li>
+			<li>목록3</li>
+		</ul>
+	</div>
+</body>
+</html>
