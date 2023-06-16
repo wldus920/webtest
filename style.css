@@ -1,9 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
-}
-
 .container {
   margin: 0 200px;
   padding: 20px;
@@ -13,28 +7,36 @@ body {
 
 .hot-contents {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
+  justify-content: space-between;
+  overflow-x: hidden;
   margin: 20px 0;
+  flex-wrap: nowrap;
 }
-
-.hot-contents::-webkit-scrollbar {
-  height: 5px;
-}
-
-.hot-contents::-webkit-scrollbar-thumb {
-  background-color: #999;
-  border-radius: 5px;
-}
-
-.hot-contents::-webkit-scrollbar-track {
-  background-color: #f2f2f2;
 
 .hot-contents .content {
-  width: 49%;
+  flex-basis: 19%;
   background-color: #e8e8e8;
   padding: 10px;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-right: 10px;
   text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.controls button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls button:focus {
+  outline: none;
 }

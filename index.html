@@ -18,14 +18,14 @@
 
 		.hot-contents {
 		  display: flex;
-		  justify-content: flex-start;
+		  justify-content: space-between;
 		  overflow-x: hidden;
 		  margin: 20px 0;
 		  flex-wrap: nowrap;
 		}
 
 		.hot-contents .content {
-		  width: 32%;
+		  flex-basis: 19%;
 		  background-color: #e8e8e8;
 		  padding: 10px;
 		  box-sizing: border-box;
@@ -72,46 +72,78 @@
 		ul li:hover {
 			background-color: #e8e8e8;
 		}
+
+		.arrow {
+			position: relative;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: #007bff;
+			color: #fff;
+			font-size: 24px;
+			line-height: 30px;
+			text-align: center;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.arrow.left {
+			margin-right: 10px;
+		}
+
+		.arrow.right {
+			margin-left: 10px;
+		}
+
+		.arrow:hover {
+			background-color: #0056b3;
+		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<h1>학교 콘텐츠</h1>
-		<div class="hot-contents">
-			<div class="content">
-				<h2>HOT CONTENTS 1</h2>
-				<p>내용1</p>
-			</div>
-			<div class="content">
-				<h2>HOT CONTENTS 2</h2>
-				<p>내용2</p>
-			</div>
-			<div class="content">
-				<h2>HOT CONTENTS 3</h2>
-				<p>내용3</p>
-			</div>
-			<div class="content">
-				<h2>HOT CONTENTS 4</h2>
-				<p>내용4</p>
-			</div>
-			<div class="content">
-				<h2>HOT CONTENTS 5</h2>
-				<p>내용5</p>
-			</div>
-			<div class="content">
-				<h2>HOT CONTENTS 6</h2>
-				<p>내용6</p>
-			</div>
-		</div>
-		<div>
-			<input type="text" placeholder="검색">
-			<button>검색</button>
-		</div>
-		<ul>
-			<li>목록1</li>
-			<li>목록2</li>
-			<li>목록3</li>
-		</ul>
-	</div>
+ 	<div class="container">
+    		<h1>학교 콘텐츠</h1>
+    		<div class="hot-contents">
+      		<div class="content">
+        			<h2>HOT CONTENTS 1</h2>
+        			<p>내용1</p>
+      		</div>
+      	<div class="content">
+        		<h2>HOT CONTENTS 2</h2>
+        		<p>내용2</p>
+      	</div>
+      	<div class="content">
+        		<h2>HOT CONTENTS 3</h2>
+        		<p>내용3</p>
+      	</div>
+      	<div class="content">
+        		<h2>HOT CONTENTS 4</h2>
+        		<p>내용4</p>
+      	</div>
+      	<div class="content">
+        		<h2>HOT CONTENTS 5</h2>
+        		<p>내용5</p>
+     	 	</div>
+    	</div>
+
+    	<div class="controls">
+      	<button class="prev-btn">&#9664;</button>
+      	<button class="next-btn">&#9654;</button>
+    	</div>
+
+    <div>
+      <input type="text" placeholder="검색">
+      <button>검색</button>
+    </div>
+
+    <ul>
+      <li>목록1</li>
+      <li>목록2</li>
+      <li>목록3</li>
+    </ul>
+  </div>
 </body>
+
 </html>
+
