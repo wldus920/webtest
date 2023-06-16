@@ -1,91 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>학교 콘텐츠</title>
+	<title>강의 정보</title>
 	<style>
 		body {
-		  margin: 0;
-		  padding: 0;
-		  background-color: #f2f2f2;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
 		}
 
 		.container {
-		  margin: 0 200px;
-		  padding: 20px;
-		  box-sizing: border-box;
-		  background-color: #fff;
+			margin: 20px 200px;
+			padding: 20px;
+			box-sizing: border-box;
+			background-color: #fff;
+		}
+		h1 {
+			margin-bottom: 100px; /* Add spacing below the h1 element */
+		}
+
+		h2 {
+			margin-top: 40px; /* Add spacing above the h2 element */
 		}
 
 		.hot-contents {
-		  display: flex;
-		  justify-content: space-between;
-		  overflow-x: hidden;
-		  margin: 20px 0;
-		  flex-wrap: nowrap;
-		}
-
-		.hot-contents .content {
-		  flex-basis: 19%;
-		  background-color: #e8e8e8;
-		  padding: 10px;
-		  box-sizing: border-box;
-		  margin-right: 10px;
-		  text-align: center;
-		}
-
-		.search-box {
+			position: relative;
 			display: flex;
-			align-items: center;
-			margin-top: 20px;
+			justify-content: space-between;
+			overflow-x: hidden;
+			margin: 30px 0;
 		}
 
-		.search-box input[type="text"] {
-			flex: 1;
-			padding: 10px;
-			border-radius: 5px 0 0 5px;
-			border: none;
-		}
-
-		.search-box button {
-			padding: 10px;
-			background-color: #007bff;
-			color: #fff;
-			border: none;
-			border-radius: 0 5px 5px 0;
-			cursor: pointer;
-		}
-
-		ul {
-			margin-top: 20px;
-			padding-left: 0;
-			list-style-type: none;
-		}
-
-		ul li {
-			margin-bottom: 10px;
-			padding: 10px;
-			background-color: #f2f2f2;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-
-		ul li:hover {
-			background-color: #e8e8e8;
+		.arrow-container {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50%;
+			display: flex;
+			justify-content: space-between;
+			transform: translateY(-50%);
 		}
 
 		.arrow {
-			position: relative;
-			display: inline-block;
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
 			background-color: #007bff;
 			color: #fff;
 			font-size: 24px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
 			line-height: 30px;
 			text-align: center;
 			cursor: pointer;
 			transition: background-color 0.3s ease;
+		}
+
+		.arrow:hover {
+			background-color: #0056b3;
 		}
 
 		.arrow.left {
@@ -96,54 +66,99 @@
 			margin-left: 10px;
 		}
 
-		.arrow:hover {
-			background-color: #0056b3;
+		.content {
+			background-color: #e8e8e8;
+			padding: 10px;
+			box-sizing: border-box;
+			margin-right: 10px;
+			text-align: center;
+			border-radius: 5px;
+		}
+		ul {
+			margin-top: 20px;
+			padding-left: 0;
+			list-style-type: none;
+		}
+
+		ul li {
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: #e8e8e8;
+			border-radius: 5px;
+			cursor: pointer;
+			white-space: pre;
+		}
+
+		.search-container {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0;
+			margin-top: 50px;
+		}
+
+		.search-container select,
+		.search-container input[type="text"],
+		.search-container button {
+			margin-right: 10px;
+		}
+
+		.search-container input[type="text"] {
+			padding: 5px;
+		}
+
+		.search-container button {
+			padding: 5px 10px;
+			cursor: pointer;
 		}
 	</style>
 </head>
 <body>
- 	<div class="container">
-    		<h1>학교 콘텐츠</h1>
-    		<div class="hot-contents">
-      		<div class="content">
-        			<h2>HOT CONTENTS 1</h2>
-        			<p>내용1</p>
-      		</div>
-      	<div class="content">
-        		<h2>HOT CONTENTS 2</h2>
-        		<p>내용2</p>
-      	</div>
-      	<div class="content">
-        		<h2>HOT CONTENTS 3</h2>
-        		<p>내용3</p>
-      	</div>
-      	<div class="content">
-        		<h2>HOT CONTENTS 4</h2>
-        		<p>내용4</p>
-      	</div>
-      	<div class="content">
-        		<h2>HOT CONTENTS 5</h2>
-        		<p>내용5</p>
-     	 	</div>
-    	</div>
+	<div class="container">
+		<h1>강의 정보</h1>
+		<h2>인기 강의</h2>	
 
-    	<div class="controls">
-      	<button class="prev-btn">&#9664;</button>
-      	<button class="next-btn">&#9654;</button>
-    	</div>
+		<div class="hot-contents">
+			<div class="arrow-container">
+				<div class="arrow left">&#9664;</div>
+				<div class="arrow right">&#9654;</div>
+			</div>
+			<div class="content">
+				<h2>문학문화콘텐츠학과</h2>
+				<p>스토리텔링의 세계<br><br>화 1~3M(9:00~12:00)</p>
+			</div>
+			<div class="content">
+				<h2>선필교 / 인문학</h2>
+				<p>역사스토리의 재구성<br><br>월 5M~8(13:00~16:30)</p>
+			</div>
+			<div class="content">
+				<h2>선필교 / 사회과학</h2>
+				<p>미래사회와 정부<br><br>월 6~6M(14:00~15:00) 온라인 2시간</p>
+			</div>
+			<div class="content">
+				<h2>선필교 / 인문학</h2>
+				<p>영화로 보는 패션<br><br>온라인 3시간</p>
+			</div>
+			<div class="content">
+				<h2>선필교 / 사회과학</h2>
+				<p>중국 사회, 문화의 이해<br><br>화 5~5M(13:00~14:00) 온라인 2시간</p>
+			</div>
+		</div>
+		<div class="search-container">
+			<select>
+				<option value="option1">선택하세요</option>
+				<option value="lecture">전공</option>
+				<option value="department">선필교</option>
+				<option value="category">일반강의</option>
+			</select>
+			<input type="text" placeholder="강의 검색">
+			<button>검색</button>
+		</div>
 
-    <div>
-      <input type="text" placeholder="검색">
-      <button>검색</button>
-    </div>
-
-    <ul>
-      <li>목록1</li>
-      <li>목록2</li>
-      <li>목록3</li>
-    </ul>
-  </div>
+		<ul>
+			<li>강의시간			스토리텔링의 세계<br>화1~3M(9:00~12:00)</li>
+			<li>강의시간			과학기술과 인문학<br>화7~7M(15:00~16:00)</li>
+			<li>강의시간			운동과 건강<br>화7~9M(15:00~18:00)</li>
+		</ul>
+	</div>
 </body>
-
 </html>
-
